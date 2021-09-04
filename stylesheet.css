@@ -16,15 +16,13 @@ header{
   position: fixed;
   top:0;
   width:100%;
-  /* background-color:transparent; */
   background-color:white;
   display: flex;
   align-items: center;
-  /* z-index: 100; */
 }
 
 .logo img{
-  width:50%;
+  width:20%;
   height: auto;
 }
 
@@ -54,12 +52,12 @@ header nav{
   margin:0 0 0 auto;
 }
 
-
-/* .main_visual h2{
-  margin-top:200px;
-  color:black;
-  font-size:1rem;
-} */
+/* サイト内リンク位置調整用 */
+a.anchor{
+  display: block;
+  padding-top: 400px;
+  margin-top: -70px;
+}
 
 .main_visual {
   display: flex;
@@ -72,17 +70,27 @@ h2 {
   margin: 0;
   font-size: 30px;
   font-weight: normal;
-  /* color: #fff; */
   color:black;
 }
 
-/* About site */
-.a_s_title{
+.about_site{
+  height: 100vh;
   text-align: center;
 }
 
-.a_s_exp{
+.introduce{
+  height: 100vh;
   text-align: center;
-  /* line-height:1; */
 }
- 
+
+.portfolio{
+  height: 100vh;
+  text-align: center;
+}
+
+
+
+.mail{
+  height: 100vh;
+  text-align: center;
+}
