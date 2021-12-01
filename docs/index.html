@@ -57,16 +57,29 @@
             <img src="chart.png">
         </div>
     </div>
-    <div class ="mail" id = "mail">
-        <div class = "mail_title">
-            <a class = "anchor"></a>
-            <h2>連絡先</h2>
+    <form method="post" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVl0N8qFDPhXYU5RHy0G6SLp7spwsfZrxJRnJFxSXcBBQDTQ/formResponse">
+        <div class="Form">
+            <div class="Form-Title">
+                <h2>お問い合わせ</h2>
+                <p>お気軽にお問い合わせくださいませ。</p>
+            </div>
+            <div class="Form-Item">
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+                <input type="text" name="entry.462154011" class="Form-Item-Input" placeholder="例）山田太郎">
+            </div>
+            <div class="Form-Item">
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                <input type="email" name="entry.798130987" class="Form-Item-Input" placeholder="例）example@gmail.com">
+            </div>
+            <div class="Form-Item">
+                <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+                <textarea class="Form-Item-Textarea" name="entry.844631762"></textarea>
+            </div>
+            <input type="submit" name="button" class="Form-Btn" value="送信する">
         </div>
-        <div class ="mail_exp">
-            <p>considerate.growth.family@gmail.com</p>
-            <p>お気軽にお問合せください</p>
-        </div>
-    </div>
+    </form>
+    <script type="text/javascript">var submitted = false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='./thanks.html';}"></iframe>
     <button id="scroll-to-top-btn">≫</button>
     <script type="text/javascript" src="./javaScript.js"></script>
 </html>
