@@ -14,7 +14,6 @@ function scroll_to_top(){
 
 //スクロール時のイベントを追加
 window.addEventListener( 'scroll' , scroll_event );
-
 function scroll_event(){
   if(window.pageYOffset > 400){
     scroll_to_top_btn.style.opacity = '1';
