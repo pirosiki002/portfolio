@@ -88,6 +88,16 @@ h2 {
   text-align: center;
 }
 
+.port_exp{
+  margin-top: 10rem;
+}
+
+.port_product{
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-around;
+}
+
 .mail{
   height: 100vh;
   text-align: center;
