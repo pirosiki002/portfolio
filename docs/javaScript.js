@@ -22,4 +22,5 @@ function scroll_event(){
   }
 };
 
-$("h1").html("jQueryの練習ですzo");
+//Jquery(debug)
+// $("h1").html("jQueryの練習ですzo");
