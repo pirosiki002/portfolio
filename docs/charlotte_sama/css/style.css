@@ -1,0 +1,478 @@
+@charset "UTF-8"; /* 文字化け防止 */
+
+
+/* 共通部分
+------------------------------------ */
+html{
+  font-size:100%;
+}
+
+body{
+  font-family: "Yu Gothic Medium", YuGothic, "遊ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color:#432;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 最大幅と余白の調整 */
+.wrapper{
+  max-width: 1100px;
+  margin: 0 auto;     /* 中央寄せ */
+  padding: 0 4%;
+}
+
+/* ヘッダー
+------------------------------------ */
+/* ロゴとメニュを横並びにする */
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 100%;
+  /* トップに固定し、常に表示 */
+  position: fixed; /* ポジションを固定する */
+  top: 0px;        /*一番上に設置*/
+  left: 0px;
+  z-index: 9999;   /*どの要素よりも上にくるように*/
+
+}
+
+.logo{
+  width: 100px;
+  margin-top: 14px;
+  margin-left: 30px;
+}
+
+/* メニューを横並びにする */
+.main-nav{
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;  /* 英大文字 */
+  margin-top: 34px;
+  margin-right:30px;
+  list-style: none;           /* リストの・マークを表示しない */
+}
+
+.main-nav li{
+  margin-left: 36px;
+}
+
+.main-nav a{
+  color:#432;
+}
+
+/* ナビゲーションメニュはマウスオーバーで色を変更 */
+.main-nav a:hover{
+  color:#0bd;
+}
+
+/* HOME
+------------------------------------ */
+/* 背景画像 */
+#home{
+  min-height: 100vh;
+}
+
+#home .page-title{
+  text-transform: none;
+}
+
+/* 中央寄せ */
+.home-content{
+  position: relative;
+  text-align: center;
+}
+
+/* キャッチコピー */
+.page-title{
+  position: absolute; /* 文字の位置はHomeに合わせる */
+  font-size:5rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  text-shadow:1px 1px 3px #fff;  /* 文字に影をつける */
+  font-weight: normal;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,50%);
+  margin:0;
+  padding:0;
+  z-index: 10;  /* 優先順位をスライドショーより高くする */
+  opacity: 1;   /* 透明度０=常に表示 */
+}
+
+/* スライドショー */
+.slide {
+  margin-top: 120px;  /* メニューバーとの位置調整 */
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* フェードイン・フェードアウトの設定 */
+@keyframes slideshow{
+  0%{
+    opacity: 0;
+  }
+  15%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 1;
+  }
+  38%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation :slideshow 15s linear infinite;
+}
+
+/* アニメーションの開始時間 */
+.slide img:nth-child(2){
+  animation-delay: 3s;
+}
+.slide img:nth-child(3){
+  animation-delay: 6s;
+}
+.slide img:nth-child(4){
+  animation-delay: 9s;
+}
+.slide img:nth-child(5){
+  animation-delay: 12s;
+}
+
+/* 各コンテンツ共通
+------------------------------------ */
+.contents h2{
+  font-size:3rem;
+  font-family: 'Philosopher', serif;
+  text-shadow:1px 1px 3px #fff;
+  font-weight: normal;
+}
+
+.contents p{
+  font-size:1rem;
+  font-family: 'Philosopher', serif;
+  font-weight: normal;
+}
+
+/* ABOUT
+------------------------------------ */
+.about-content{
+  margin-top: 150px;
+  margin-bottom: 150px;
+  text-align: center;
+}
+.about-content img{
+  margin-top: 40px;
+}
+
+/* メニューリンク位置調整 */
+#about-link{
+  padding-top:120px;
+  margin-top:-120px;
+}
+
+/* PLAN
+------------------------------------ */
+.plan-content{
+  margin-bottom: 150px;
+}
+
+.plan-content h2{
+  text-align: center;
+}
+
+.plan-content h3{
+  font-size:1.5rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  text-shadow:1px 1px 3px #fff;
+  font-weight: normal;
+}
+
+.plan-content p{
+  margin-top: 20px;
+}
+
+.plan-content li {
+  margin-top: 40px;
+  display: flex;
+}
+
+.plan-content li:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.plan-content img{
+  height: 320px;
+  width: 100%;
+}
+
+.resort-stay{
+  width: 50%;
+  padding-right: 40px;
+}
+
+.workation{
+  width: 50%;
+  padding-left: 40px;
+}
+
+/* メニューリンク位置調整 */
+#plan-link{
+  padding-top:120px;
+  margin-top:-120px;
+}
+
+/* ACCESS
+------------------------------------ */
+.access-content{
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.access-content p{
+  margin-bottom: 20px;
+}
+
+/* メニューリンク位置調整 */
+#access-link{
+  padding-top:120px;
+  margin-top:-120px;
+}
+
+/* ご予約
+------------------------------------ */
+.reserve-content{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.reserve-content h2{
+  font-size:2.5rem; /* 英語より日本語の方が大きいため、サイズ微調整 */
+  margin-bottom: 20px;
+}
+
+
+/* ボタンデザイン */
+.reserve-content a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 300px;
+  color:  #432;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid  #432;
+}
+
+.reserve-content a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #432;
+  border-right: 3px solid #432;
+  transform: rotate(45deg);
+}
+
+.reserve-content a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #a0c4d3;
+}
+
+.reserve-content a:hover::after {
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+}
+
+/* メニューリンク位置調整 */
+#reserve-link{
+  padding-top:120px;
+  margin-top:-120px;
+}
+
+/* SNS
+------------------------------------ */
+/* ボタン全体 */
+.flowbtn12{
+  font-family:'Verdana',sans-serif;	
+  border-radius: 4px;
+  display:inline-block;
+  width:90%;
+  font-size:20px;
+  transition:.4s;	
+  text-decoration:none;
+}
+
+/* ボタン内テキストマウスホバー時 */
+.flowbtn12:hover{
+color:#fff!important;
+text-decoration:none;
+}
+
+/* Twitter */
+.flowbtn12.fl_tw2{
+border:solid 1px #55acee;
+color:#55acee;
+}
+
+/* Twitterマウスホバー時 */
+.flowbtn12.fl_tw2:hover{
+border:solid 1px #55acee;
+background:#55acee;
+}
+
+/* Instagram */
+.flowbtn12.insta_btn2{
+  border:solid 1px #c6529a;
+  color:#c6529a;
+}
+
+/* Instagramマウスホバー時 */
+.flowbtn12.insta_btn2:hover{
+  border:solid 1px #c6529a;
+  background:#c6529a;
+}
+
+/* ボタン内テキスト調整 */
+.flowbtn12 span{
+  font-size:14px;	
+  position:relative;
+  left:8px;
+  bottom:2px;	
+}
+
+/* ulタグの内側余白を０にする */
+ul.snsbtniti2{
+  padding:0!important;
+}
+
+/* ボタン全体の位置 */
+.snsbtniti2{
+  display:flex;
+  flex-flow:row wrap;
+}
+
+/* ボタン同士の余白 */
+.snsbtniti2 li{
+  flex:0 0 48%;
+  text-align:center !important;
+  list-style: none;
+}
+
+/* トップに戻る
+------------------------------------ */
+/* トップに戻るボタン */
+.gotop{
+  display: block;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background: #FFF;
+  border: 1px solid #999;
+  padding-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  font-size: 85%;
+  text-decoration: none;
+  color: #333;
+  opacity: 0.5;
+  position: relative;
+}
+
+/* 右側に固定 */
+.gotop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.gotop::before{
+  content: "";
+  display: block;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  width: 25%;
+  height: 25%;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.gotop:hover{
+  opacity: 1;
+}
+
+/* フッター
+------------------------------------ */
+footer{
+  background: #432;
+  text-align: center;
+  padding: 26px 0;
+  margin-top: 50px;
+}
+footer p{
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+/* レスポンシブ（スマホ）対応
+------------------------------------ */
+@media screen and (max-width:600px) {
+
+  /* HOME
+  ------------------------------------ */
+  /* キャッチコピー */
+  .page-title{
+    font-size:3rem;                    /* 文字サイズを調整 */
+    transform: translate(-50%,130%);   /* 文字の位置を調整 */
+  }
+
+  /* PLAN
+  ------------------------------------ */
+  .plan-content li {
+    display: inline-block;
+  }
+
+  .resort-stay{
+    width: 100%;
+    text-align: center;
+    padding-right: 0px; /* 右の幅をリセット */
+  }
+
+  .workation{
+    width: 100%;
+    text-align: center;
+    padding-left: 0px;
+  }
+
+}
