@@ -22,5 +22,9 @@ function scroll_event(){
   }
 };
 
-//Jquery(debug)
-// $("h1").html("jQueryの練習ですzo");
+//ハンバーガーメニュで、メニューを選択したらハンバーガーを非表示
+$(function() {
+  $('#menu-content li a').on('click', function(event) {
+    $('#menu-btn-check').prop('checked', false);
+  });
+});
