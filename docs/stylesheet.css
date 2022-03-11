@@ -299,4 +299,8 @@ h2 {
   .port_product .item{
     margin-top: 50px;
   }
+
+  .access{
+    margin-top: 60vh;
+  }
 }

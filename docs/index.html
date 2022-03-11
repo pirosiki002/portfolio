@@ -54,18 +54,17 @@
             <p>製作物</p>
             <div class ="port_product">
                 <div class="product-mamaleaf item">
+                    <h3>ホームページ製作案件</h3>
+                    <p><a href="https://pirosiki002.github.io/portfolio/charlotte_sama/">Charlotte 様</a></p>
+                    <p>(HTML CSS)</p>
                     <p><a href="https://otayoly.app/">MamaLeaf 株式会社 様</a></p>
                     <p>(Wordpress)</p>
                 </div>
                 <div class="product-repair item">
-                    <p>非公開案件</p>
+                    <h3>非公開案件</h3>
                     <p>商品受注管理システム(React)</p>
                     <p>映像読み取りWebシステム(Laravel PHP)</p>
                     <p>業務改善プログラム２件(VBA)</p>
-                </div>
-                <div class="product-charlotte item">
-                    <p><a href="https://pirosiki002.github.io/portfolio/charlotte_sama/">Charlotte 様</a></p>
-                    <p>(HTML CSS)</p>
                 </div>
             </div>
             <div class ="port_exp">
@@ -75,28 +74,30 @@
                 <img src="chart.png">
             </div>
         </div>
-        <form method="post" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVl0N8qFDPhXYU5RHy0G6SLp7spwsfZrxJRnJFxSXcBBQDTQ/formResponse">
-            <div class="Form" id="form">
-                <div class="Form-Title">
-                    <a class = "anchor"></a>
-                    <h2>お問い合わせ</h2>
-                    <p>お気軽にお問い合わせくださいませ。</p>
+        <div class="access">
+            <form method="post" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVl0N8qFDPhXYU5RHy0G6SLp7spwsfZrxJRnJFxSXcBBQDTQ/formResponse">
+                <div class="Form" id="form">
+                    <div class="Form-Title">
+                        <a class = "anchor"></a>
+                        <h2>お問い合わせ</h2>
+                        <p>お気軽にお問い合わせくださいませ。</p>
+                    </div>
+                    <div class="Form-Item">
+                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+                        <input type="text" name="entry.462154011" class="Form-Item-Input" placeholder="例）山田太郎" required="">
+                    </div>
+                    <div class="Form-Item">
+                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                        <input type="email" name="entry.798130987" class="Form-Item-Input" placeholder="例）example@gmail.com" required="">
+                    </div>
+                    <div class="Form-Item">
+                        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+                        <textarea class="Form-Item-Textarea" name="entry.844631762"required=""></textarea>
+                    </div>
+                    <input type="submit" name="button" class="Form-Btn" value="送信する">
                 </div>
-                <div class="Form-Item">
-                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
-                    <input type="text" name="entry.462154011" class="Form-Item-Input" placeholder="例）山田太郎" required="">
-                </div>
-                <div class="Form-Item">
-                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
-                    <input type="email" name="entry.798130987" class="Form-Item-Input" placeholder="例）example@gmail.com" required="">
-                </div>
-                <div class="Form-Item">
-                    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
-                    <textarea class="Form-Item-Textarea" name="entry.844631762"required=""></textarea>
-                </div>
-                <input type="submit" name="button" class="Form-Btn" value="送信する">
-            </div>
-        </form>
+            </form>
+        </div>
         <script type="text/javascript">var submitted = false;</script>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='./thanks.html';}"></iframe>
         <button id="scroll-to-top-btn">≫</button>
