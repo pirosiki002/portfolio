@@ -11,6 +11,10 @@ body {
   letter-spacing: 0.2em;
 }
 
+h1, h2, h3, p, li{
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
 /* ヘッダー */
 
 header{
